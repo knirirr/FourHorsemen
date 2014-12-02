@@ -1,0 +1,35 @@
+This script requires Perl and Games::Dice. Information on installing them can be found here:
+http://dotclue.org/t20/
+You'll also find that software useful for plotting maps when you've finished.
+
+To apply the collapse/recovery rules from Stellar Reaches 5 you'll need a subsector data file
+in .sec format and a text file detailing what sort of environment each subsector should have.
+The format is as in the included subsectclass.txt file, thus:
+
+S - Safe.
+F - Frontier.
+W - Wilds.
+D - Deep wilds.
+H - Holocaust.
+
+Run the script thus:
+
+./fourhorsemen.pl sector_data.sec subsectclass.txt
+
+This will produce output files called new_sector_data.sec and notes_sector_data.sec. The former
+is the altered sector data, and the latter a summary of what the script has been up to whilst running.
+This may be of use as a starting point for creating a history for the world since 1130.
+
+The one thing that I have not included is the modifiers to the roll for recovering population through
+recolonisation, basically because I was too lazy to add the extra complexity to the code. Therefore,
+the referee will have to check the notes file for worlds that have been recolonised and check that there
+are sufficient TL9+ worlds in the vicinity for this to happen. The notes files saves the original roll
+used to determine if the world was recolonised so that you may check. The original rules can be found
+here:
+
+http://stellarreaches.nwgamers.org/2006/09/09/issue-5-has-been-released/
+
+The legal terms for the original rules are here:
+http://stellarreaches.nwgamers.org/legal/
+This code is made available under the same terms as Perl itself.
+Any comments or questions, please e-mail knirirr@gmail.com.
